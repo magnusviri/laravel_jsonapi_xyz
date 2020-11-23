@@ -1,0 +1,1 @@
+# laravel_jsonapi_xyz
