@@ -8,4 +8,11 @@ use Illuminate\Database\Eloquent\Model;
 class Z extends Model
 {
     use HasFactory;
+
+    protected $fillable = ['name'];
+
+    public function xes()
+    {
+        return $this->belongsToMany('App\Models\X');
+    }
 }
