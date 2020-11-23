@@ -13,7 +13,7 @@ These notes assume you're using Homestead (so the mysql command never specifies 
 
 In your Homestead.yaml file make sure you have something like the following.
 
->    folders:
+>     folders:
 >        - map: ~/code
 >          to: /home/vagrant/code
 >    
