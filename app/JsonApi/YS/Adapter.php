@@ -31,7 +31,7 @@ class Adapter extends AbstractAdapter
      */
     public function __construct(StandardStrategy $paging)
     {
-        parent::__construct(new \App\Y(), $paging);
+        parent::__construct(new \App\Models\Y(), $paging);
     }
 
     /**
@@ -44,4 +44,8 @@ class Adapter extends AbstractAdapter
         $this->filterWithScopes($query, $filters);
     }
 
+    protected function xes()
+    {
+        return $this->hasMany();
+    }
 }
