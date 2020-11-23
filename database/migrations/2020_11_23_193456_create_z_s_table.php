@@ -16,6 +16,7 @@ class CreateZSTable extends Migration
         Schema::create('z_s', function (Blueprint $table) {
             $table->id();
             $table->timestamps();
+            $table->string('name');
         });
     }
 

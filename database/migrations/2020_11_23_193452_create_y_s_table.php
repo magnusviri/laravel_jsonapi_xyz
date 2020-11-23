@@ -16,6 +16,8 @@ class CreateYSTable extends Migration
         Schema::create('y_s', function (Blueprint $table) {
             $table->id();
             $table->timestamps();
+            $table->string('name');
+            $table->bigInteger('x_id');
         });
     }
 

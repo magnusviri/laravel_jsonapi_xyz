@@ -14,8 +14,12 @@ class CreateXZTable extends Migration
     public function up()
     {
         Schema::create('x_z', function (Blueprint $table) {
-            $table->id();
-            $table->timestamps();
+            // $table->id();
+            // $table->timestamps();
+            $table->bigInteger('x_id')->unsigned()->index();
+            $table->foreign('x_id')->references('id')->on('x_e_s');
+            $table->bigInteger('z_id')->unsigned()->index();
+            $table->foreign('z_id')->references('id')->on('z_s');
         });
     }
 

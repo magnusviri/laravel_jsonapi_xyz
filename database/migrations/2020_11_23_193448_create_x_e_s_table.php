@@ -16,6 +16,7 @@ class CreateXESTable extends Migration
         Schema::create('x_e_s', function (Blueprint $table) {
             $table->id();
             $table->timestamps();
+            $table->string('name');
         });
     }
 
