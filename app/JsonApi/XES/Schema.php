@@ -10,7 +10,7 @@ class Schema extends SchemaProvider
     /**
      * @var string
      */
-    protected $resourceType = 'x-e-s';
+    protected $resourceType = 'xes';
 
     /**
      * @param \App\X $resource
@@ -32,6 +32,21 @@ class Schema extends SchemaProvider
         return [
             'createdAt' => $resource->created_at,
             'updatedAt' => $resource->updated_at,
+            'name' => $resource->name,
+        ];
+    }
+
+    public function getRelationships($resource, $isPrimary, array $includeRelationships)
+    {
+        return [
+            'ys' => [
+                self::SHOW_SELF => true,
+                self::SHOW_RELATED => true,
+            ],
+            'zs' => [
+                self::SHOW_SELF => true,
+                self::SHOW_RELATED => true,
+            ]
         ];
     }
 }
